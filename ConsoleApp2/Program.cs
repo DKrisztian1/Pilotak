@@ -44,18 +44,22 @@ for (int i = 1; i < Pilotak.Count(); i++)
 }
 Console.WriteLine($"6.Feladat: {Pilotak[legkisebbIndexe].Nemzetiseg}");
 
+
 //7.
 int[] elofordultSzamok = new int[Pilotak.Count()];
+int elofordultIndex = 0;
+Console.Write("7.Feladat: ");
 for (int i = 1; i < Pilotak.Count(); i++)
 {
     if (Pilotak[i].Rajtszam != -1)
     {
-        if (elofordultSzamok.Contains(Pilotak[i].Rajtszam))
+        if (!elofordultSzamok.Contains(Pilotak[i].Rajtszam))
         {
-            
+            elofordultSzamok[elofordultIndex] = Pilotak[i].Rajtszam;
+            elofordultIndex++;
         }
+        else
+            Console.Write($"{Pilotak[i].Rajtszam}, ");
     }
-    
 }
-
-    sr.Close();
+sr.Close();

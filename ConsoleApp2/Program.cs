@@ -32,7 +32,7 @@ for (int i = 0; i < Pilotak.Count(); i++)
 {
     string[] datum = Pilotak[i].SzulEv.Split(".");
     if (Convert.ToInt32(datum[0]) < 1901)
-        Console.WriteLine($"\t {Pilotak[i].Nev} ({Pilotak[i].SzulEv})");
+        Console.WriteLine($"\t {Pilotak[i].Nev} ({datum[0]}. {datum[1]}. {datum[2]}.)");
 }
 
 //6.
